@@ -1,6 +1,6 @@
 {
 	"name": "vscode-night-mode",
-	"displayName": "Activate contrast theme based on your timezone",
+	"displayName": "Night Mode",
 	"description": "Change vscode theme based on your timezone",
 	"version": "0.0.1",
 	"publisher": "gokulkrishh",
