@@ -1,34 +1,34 @@
 {
-  "name": "vscode-night-mode",
-  "displayName": "Activate contrast theme based on your timezone",
-  "description": "Change vscode theme based on your timezone",
-  "version": "0.0.1",
+	"name": "vscode-night-mode",
+	"displayName": "Activate contrast theme based on your timezone",
+	"description": "Change vscode theme based on your timezone",
+	"version": "0.0.1",
 	"publisher": "gokulkrishh",
 	"galleryBanner": {
 		"color": "#414141",
 		"theme": "dark"
 	},
-  "engines": {
-    "vscode": "^1.14.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
+	"engines": {
+		"vscode": "^1.14.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
 		"onCommand:extension.activate",
 		"onCommand:extension.deactivate"
-  ],
-  "main": "./extension",
-  "contributes": {
-    "commands": [
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
 			{
-        "command": "extension.activate",
-        "title": "Activate night mode extension"
+				"command": "extension.activate",
+				"title": "Activate night mode extension"
 			},
 			{
-        "command": "extension.deactivate",
-        "title": "Deactivate night mode extension"
-      }
+				"command": "extension.deactivate",
+				"title": "Deactivate night mode extension"
+			}
 		],
 		"keybindings": [
 			{
@@ -42,11 +42,11 @@
 				"mac": "cmd+shift+."
 			}
 		]
-  },
-  "scripts": {
-    "postinstall": "node ./node_modules/vscode/bin/install"
-  },
-  "devDependencies": {
-    "vscode": "^1.0.0"
-  }
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"vscode": "^1.0.0"
+	}
 }
