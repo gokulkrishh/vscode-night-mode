@@ -1,0 +1,53 @@
+{
+  "name": "vscode-night-mode",
+  "displayName": "Activate contrast theme based on your timezone",
+  "description": "Change vscode theme based on your timezone",
+  "version": "0.0.1",
+	"publisher": "gokulkrishh",
+	"galleryBanner": {
+		"color": "#414141",
+		"theme": "dark"
+	},
+  "engines": {
+    "vscode": "^1.14.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+		"onCommand:extension.activate",
+		"onCommand:extension.deactivate"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+			{
+        "command": "extension.activate",
+        "title": "Activate night mode extension"
+			},
+			{
+        "command": "extension.deactivate",
+        "title": "Deactivate night mode extension"
+      }
+		],
+		"keybindings": [
+			{
+				"command": "extension.activate",
+				"key": "ctrl+.",
+				"mac": "cmd+."
+			},
+			{
+				"command": "extension.deactivate",
+				"key": "ctrl+shift+.",
+				"mac": "cmd+shift+."
+			}
+		]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "vscode": "^1.0.0",
+    "eslint": "^3.6.0"
+  }
+}
