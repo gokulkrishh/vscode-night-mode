@@ -28,7 +28,7 @@ ext install vscode-night-mode
 
 ### Shortcuts windows & Mac 
 
-- <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>shift</kbd> <kbd>.</kbd>
+- <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>.</kbd>
 
 #### TODO
 
