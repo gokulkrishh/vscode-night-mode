@@ -32,8 +32,8 @@ ext install vscode-night-mode
 
 #### TODO
 
-[ ] - Custom time
+- [] - Custom time
 
-[ ] - Custom theme color option
+- [] - Custom theme color option
 
 MIT Licensed
