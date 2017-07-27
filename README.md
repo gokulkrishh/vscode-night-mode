@@ -1,6 +1,6 @@
 # vscode-night-mode
 
-*Automatically change `current theme` to `contrast theme` at `night`, and `switch back` to `previous theme` in the `morning`*
+Automatically change `current theme` to `contrast theme` at `night`, and `switch back` to `previous theme` in the `morning`
 
 # Install
 
