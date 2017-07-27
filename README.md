@@ -7,7 +7,7 @@
 Inside VS Code press (⌘+P) and paste the below command and hit enter.
 
 ```bash
-	ext install vscode-night-mode
+ext install vscode-night-mode
 ```
 
 ## Activate
