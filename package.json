@@ -9,7 +9,7 @@
 		"email": "krishnangokul9@gmail.com",
 		"url": "https://gokulkrishh.github.io"
 	},
-	"icons": "images/vscode-night-mode.png",
+	"icon": "images/vscode-night-mode.png",
 	"galleryBanner": {
 		"color": "#414141",
 		"theme": "dark"
