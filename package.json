@@ -65,8 +65,5 @@
 		"url": "https://github.com/gokulkrishh/vscode-night-mode.git"
 	},
 	"homepage": "https://github.com/gokulkrishh/vscode-night-mode/blob/master/README.md",
-	"license": "MIT",
-	"dependencies": {
-		"sunset": "^0.2.0"
-	}
+	"license": "MIT"
 }
