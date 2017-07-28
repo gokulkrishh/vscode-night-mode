@@ -25,7 +25,7 @@ ext install vscode-night-mode
 
 - <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>.</kbd>
 
-### <p align="center"><img src="https://raw.githubusercontent.com/gokulkrishh/vscode-night-mode/master/images/vscode-activated.jpg"></p>
+### <p align="center"><img src="https://raw.githubusercontent.com/gokulkrishh/vscode-night-mode/master/images/vscode-activated.png"></p>
 
 
 ## Deactivate the extension
