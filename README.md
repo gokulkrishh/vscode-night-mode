@@ -6,7 +6,7 @@ An extension to automatically change current theme to `custom theme` at `night (
 
 ## Quick Start
 
-- Install the extension with below using (⌘+P) or search for `vscode-night-mode` and install.
+- Install the extension with below using <kbd>⌘</kbd> + <kbd>p</kbd> or search for `vscode-night-mode` and install.
 
 ```bash
 ext install vscode-night-mode
