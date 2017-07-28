@@ -17,11 +17,10 @@ function activate(context) {
 		const currentDate = new Date();
 		const currentHours = currentDate.getHours();
 
-		changeTheme(); //Change theme while activating ext
+		changeTheme(); //Change theme while activating the ext
 
 		options.setIntervalId = setInterval(() => {
 			changeTheme();
-
 			if (options.isDeactivated && options.setIntervalId) {
 				clearInterval(options.setIntervalId);
 			}
@@ -29,25 +28,29 @@ function activate(context) {
 
 		function changeTheme() {
 			if (config.get('colorTheme') !== options.themeColor) {
-				if (currentHours > 13) {
+				if (currentHours > 18 && currentHours < 6) {
 					const oldThemeColor = config.get('colorTheme');
 					options.oldThemeColor = oldThemeColor;
 					config.update('colorTheme', options.themeColor, true);
-					vscode.window.showInformationMessage('Night mode extension is activated');
+					var msgDisposable = vscode.window.setStatusBarMessage('Night mode extension is activated');
+					setTimeout(function() {
+						msgDisposable.dispose();
+					}, 4000);
 				}
 			}
 			else {
-				if (currentHours > 6) {
+				if (currentHours > 6 && currentHours < 18) {
 					if (options.oldThemeColor) {
 						config.update('colorTheme', options.oldThemeColor, true);
 					}
 					else {
-						config.update('colorTheme', null, true);
+						config.update('colorTheme', '', true);
 					}
 				}
 			}
 		}
 	});
+	
 
 	var deactivateEvent = vscode.commands.registerCommand('extension.deactivate', function () { 
 		deactivate();
@@ -70,7 +73,10 @@ function deactivate() {
 	if (options.setIntervalId) {
 		clearInterval(options.setIntervalId);
 	}
-	vscode.window.showInformationMessage('Night mode extension is deactivated');
+	var msgDisposable = vscode.window.setStatusBarMessage('Night mode extension is deactivated');
+	setTimeout(function() {
+		msgDisposable.dispose();
+	}, 4000);
 }
 
 exports.activate = activate;

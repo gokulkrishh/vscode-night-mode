@@ -1,16 +1,19 @@
 # vscode-night-mode
 
-Automatically change `current theme` to `contrast theme` at `night`, and `switch back` to `previous theme` in the `morning`
+An extension to automatically change current theme to `contrast theme` at `night`, and `switch back` to `previous theme` in the `morning`.
 
-# Install
+- Supports shortcuts
+- Supports command palatte to activate/deactivate
 
-Inside VS Code press (⌘+P) and paste the below command and hit enter.
+## Quick Start
+
+- Install the extension with below using (⌘+P) or search for `vscode-night-mode` and install.
 
 ```bash
 ext install vscode-night-mode
 ```
 
-## Activate
+## Activate the extension
 
 - In VS Code press (⌘+shift+P).
 
@@ -20,17 +23,17 @@ ext install vscode-night-mode
 
 - <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>.</kbd>
 
-## Deactivate
+## Deactivate the extension
 
 - In VS Code press (⌘+shift+P).
 
 - Search for `Deactivate night mode extension`.
 
-### Shortcuts windows & Mac 
+## Shortcuts windows & Mac 
 
 - <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>.</kbd>
 
-#### TODO
+### TODO
 
 - [ ] - Custom time
 
