@@ -42,7 +42,9 @@ nightMode.colorTheme = ""; // Default - Default High Contrast
 
 ### TODO
 
-- [ ] - Custom theme & time.
+- [x] - Custom theme.
+
+- [ ] - Detech location to determine sunrise & sunset.
 
 ##### Contributions
 
