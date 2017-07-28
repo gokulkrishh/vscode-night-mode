@@ -48,7 +48,7 @@
 			"type": "object",
 			"title": "Night mode configurations",
 			"properties": {
-				"nightMode.colorTheme": {
+				"vscodeNightMode.colorTheme": {
 					"type": "string",
 					"description": "Enter your custom theme name to change"
 				}

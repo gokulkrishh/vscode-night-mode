@@ -1,5 +1,5 @@
 const vscode = require('vscode');
-const nightModeConfig = vscode.workspace.getConfiguration('nightMode'); // My extension config
+const nightModeConfig = vscode.workspace.getConfiguration('vscodeNightMode'); // My extension config
 
 // Default options
 const options = {

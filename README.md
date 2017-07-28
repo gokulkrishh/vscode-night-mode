@@ -17,7 +17,7 @@ ext install vscode-night-mode
 In your `workspace.json` or `settings.json`, give your choice of theme name to change.
 
 ```json
-nightMode.colorTheme = ""; // Default - Default High Contrast
+vscodeNightMode.colorTheme = ""; // Default - Default High Contrast
 ```
 
 ## Activate the extension
