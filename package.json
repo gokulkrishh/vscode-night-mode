@@ -1,5 +1,5 @@
 {
-	"name": "vscode-night-mode",
+	"name": "night-mode",
 	"displayName": "Night Mode",
 	"description": "Change vscode theme based on your timezone",
 	"version": "0.0.1",
@@ -43,7 +43,17 @@
 				"key": "ctrl+shift+.",
 				"mac": "cmd+shift+."
 			}
-		]
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Night mode configurations",
+			"properties": {
+				"nightMode.colorTheme": {
+					"type": "string",
+					"description": "Enter your custom theme name to change"
+				}
+			}			
+		}
 	},
 	"scripts": {
 		"postinstall": "node ./node_modules/vscode/bin/install"

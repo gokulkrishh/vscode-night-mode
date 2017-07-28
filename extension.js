@@ -1,20 +1,19 @@
-var vscode = require('vscode');
+const vscode = require('vscode');
+const nightModeConfig = vscode.workspace.getConfiguration('nightMode'); // My extension config
 
 // Default options
 const options = {
+	colorTheme: nightModeConfig.colorTheme || 'Default High Contrast',
 	isDeactivated: false,
-	setIntervalId: null,
-	oldThemeColor: '',
 	msg: 'Night mode extension is activated 👍',
-	themeColor: 'Default High Contrast'
+	oldColorTheme: '',
+	setIntervalId: null
 };
 
 function activate(context) {
 	var activateEvent = vscode.commands.registerCommand('extension.activate', function () {
 		const config = vscode.workspace.getConfiguration('workbench');
-		
-		options.isDeactivated = false;
-		
+
 		const currentDate = new Date();
 		const currentHours = currentDate.getHours();
 
@@ -28,17 +27,17 @@ function activate(context) {
 		}, 60000);
 
 		function changeTheme() {
-			if (config.get('colorTheme') !== options.themeColor) {
-				if (currentHours >= 18) {
-					const oldThemeColor = config.get('colorTheme');
-					if (oldThemeColor) options.oldThemeColor = oldThemeColor;
-					options.msg = 'Activated contrast theme';
-					config.update('colorTheme', options.themeColor, true);
-				}
+			if (config.get('colorTheme') !== options.colorTheme) {
+				// if (currentHours >= 18) {
+					const oldColorTheme = config.get('colorTheme');
+					if (oldColorTheme) options.oldColorTheme = oldColorTheme;
+					options.msg = `Activated ${options.colorTheme} theme`;
+					config.update('colorTheme', options.colorTheme, true);
+				// }
 			}
 			else {
 				if (currentHours >= 6 && currentHours <= 18) {
-					config.update('colorTheme', options.oldThemeColor, true);
+					config.update('colorTheme', options.oldColorTheme, true);
 					options.msg = 'Changed back to your default theme';
 				}
 			}
@@ -62,11 +61,11 @@ function activate(context) {
 function deactivate() {
 	const config = vscode.workspace.getConfiguration('workbench');
 	if (!options.isDeactivated) {
-		if (!options.oldThemeColor) {
+		if (!options.oldColorTheme) {
 			config.update('colorTheme', undefined, true);
 		}
 		else {
-			config.update('colorTheme', options.oldThemeColor, true);
+			config.update('colorTheme', options.oldColorTheme, true);
 		}
 		if (options.setIntervalId) {
 			clearInterval(options.setIntervalId);

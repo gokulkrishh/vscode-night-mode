@@ -12,6 +12,14 @@ An extension to automatically change current theme to `custom theme` at `night (
 ext install vscode-night-mode
 ```
 
+## Before Activating Extension
+
+In your `workspace.json` or `settings.json`, give your choice of theme name to change.
+
+```json
+nightMode.colorTheme = ""; // Default - Default High Contrast
+```
+
 ## Activate the extension
 
 - Inside vscode editor, press <kbd>⌘</kbd> or <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>p</kbd>.
@@ -21,7 +29,6 @@ ext install vscode-night-mode
 - Shortcut - <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>.</kbd>
 
 ### <p align="center"><img src="https://raw.githubusercontent.com/gokulkrishh/vscode-night-mode/master/images/vscode-activated.png"></p>
-
 
 ## Deactivate the extension
 
