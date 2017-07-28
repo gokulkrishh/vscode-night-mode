@@ -2,7 +2,7 @@
 
 # vscode-night-mode
 
-An extension to automatically change current theme to `custom theme` at `night (> 6PM)`, and `switch back` to `previous theme` in the `morning (> 6AM)`.
+An extension to automatically change current theme to `custom theme` at `night (>= 6PM)`, and `switch back` to `previous theme` in the `morning (>= 6AM)`.
 
 ## Quick Start
 
@@ -20,21 +20,13 @@ In your `workspace.json` or `settings.json`, give your choice of theme name to c
 vscodeNightMode.colorTheme = ""; // Default - Default High Contrast
 ```
 
-## Activate the extension
-
-- Inside vscode editor, press <kbd>⌘</kbd> or <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>p</kbd>.
-
-- Search for `Activate night mode extension`.
+## Activate or Switch back to your custom theme
 
 - Shortcut - <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>.</kbd>
 
 ### <p align="center"><img src="https://raw.githubusercontent.com/gokulkrishh/vscode-night-mode/master/images/vscode-activated.png"></p>
 
 ## Deactivate the extension
-
-- Inside vscode editor, press <kbd>⌘</kbd> or <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>p</kbd>.
-
-- Search for `Deactivate night mode extension`.
 
 - Shortcut - <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>.</kbd>
 

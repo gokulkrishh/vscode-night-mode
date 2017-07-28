@@ -11,29 +11,22 @@
 	},
 	"icon": "images/vscode-night-mode.png",
 	"galleryBanner": {
-		"color": "#414141",
+		"color": "#616161",
 		"theme": "dark"
 	},
 	"engines": {
 		"vscode": "^1.14.0"
 	},
-	"categories": ["Other", "Themes"],
+	"categories": [
+		"Other",
+		"Themes"
+	],
 	"activationEvents": [
 		"onCommand:extension.activate",
 		"onCommand:extension.deactivate"
 	],
 	"main": "./extension",
 	"contributes": {
-		"commands": [
-			{
-				"command": "extension.activate",
-				"title": "Activate night mode extension"
-			},
-			{
-				"command": "extension.deactivate",
-				"title": "Deactivate night mode extension"
-			}
-		],
 		"keybindings": [
 			{
 				"command": "extension.activate",
@@ -54,7 +47,7 @@
 					"type": "string",
 					"description": "Enter your custom theme name to change"
 				}
-			}			
+			}
 		}
 	},
 	"scripts": {
@@ -72,5 +65,8 @@
 		"url": "https://github.com/gokulkrishh/vscode-night-mode.git"
 	},
 	"homepage": "https://github.com/gokulkrishh/vscode-night-mode/blob/master/README.md",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"sunset": "^0.2.0"
+	}
 }
