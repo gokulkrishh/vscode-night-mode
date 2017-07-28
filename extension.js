@@ -19,6 +19,8 @@ function activate(context) {
 
 		changeTheme(); //Change theme while activating the ext
 
+		console.log(sunset)
+
 		options.setIntervalId = setInterval(() => {
 			changeTheme();
 			if (options.isDeactivated && options.setIntervalId) {
@@ -28,18 +30,21 @@ function activate(context) {
 
 		function changeTheme() {
 			if (config.get('colorTheme') !== options.colorTheme) {
-				// if (currentHours >= 18) {
+				if (currentHours >= 18) {
 					const oldColorTheme = config.get('colorTheme');
 					if (oldColorTheme) options.oldColorTheme = oldColorTheme;
 					options.msg = `Activated ${options.colorTheme} theme`;
 					config.update('colorTheme', options.colorTheme, true);
-				// }
+				}
 			}
 			else {
-				if (currentHours >= 6 && currentHours <= 18) {
+				if (currentHours >= 6 && currentHours < 18) {
 					config.update('colorTheme', options.oldColorTheme, true);
-					options.msg = 'Changed back to your default theme';
 				}
+				else {
+					config.update('colorTheme', undefined, true);
+				}
+				options.msg = 'Changed back to your default theme';
 			}
 
 			var msgDisposable = vscode.window.setStatusBarMessage(options.msg);
