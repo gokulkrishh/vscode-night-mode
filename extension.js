@@ -19,8 +19,6 @@ function activate(context) {
 
 		changeTheme(); //Change theme while activating the ext
 
-		console.log(sunset)
-
 		options.setIntervalId = setInterval(() => {
 			changeTheme();
 			if (options.isDeactivated && options.setIntervalId) {
