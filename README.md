@@ -1,3 +1,5 @@
+### <p align="center"><img width="150px" height="150px" src="https://raw.githubusercontent.com/gokulkrishh/vscode-night-mode/master/images/vscode-night-mode.png"></p>
+
 # vscode-night-mode
 
 An extension to automatically change current theme to `contrast theme` at `night`, and `switch back` to `previous theme` in the `morning`.
