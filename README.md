@@ -2,11 +2,7 @@
 
 # vscode-night-mode
 
-An extension to automatically change current theme to `custom theme` at `night`, and `switch back` to `previous theme` in the `morning`.
-
-> 6PM to 6AM - custom theme & visa versa on the your previous theme
-
-- Supports shortcuts & command palatte to activate/deactivate
+An extension to automatically change current theme to `custom theme` at `night (> 6PM)`, and `switch back` to `previous theme` in the `morning` (> 6AM).
 
 ## Quick Start
 
