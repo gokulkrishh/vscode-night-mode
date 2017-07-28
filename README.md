@@ -2,7 +2,9 @@
 
 # vscode-night-mode
 
-An extension to automatically change current theme to `contrast theme` at `night`, and `switch back` to `previous theme` in the `morning`.
+An extension to automatically change current theme to `custom theme` at `night`, and `switch back` to `previous theme` in the `morning`.
+
+> 6PM to 6AM - custom theme & visa versa on the your previous theme
 
 - Supports shortcuts & command palatte to activate/deactivate
 
@@ -20,9 +22,7 @@ ext install vscode-night-mode
 
 - Search for `Activate night mode extension`.
 
-### Shortcut windows & Mac 
-
-- <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>.</kbd>
+- Shortcut - <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>.</kbd>
 
 ### <p align="center"><img src="https://raw.githubusercontent.com/gokulkrishh/vscode-night-mode/master/images/vscode-activated.png"></p>
 
@@ -33,16 +33,18 @@ ext install vscode-night-mode
 
 - Search for `Deactivate night mode extension`.
 
-## Shortcuts windows & Mac 
-
-- <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>.</kbd>
+- Shortcut - <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>.</kbd>
 
 ### <p align="center"><img src="https://raw.githubusercontent.com/gokulkrishh/vscode-night-mode/master/images/vscode-deactivated.png"></p>
 
 ### TODO
 
-- [ ] - Custom time
+- [ ] - Custom theme & time.
 
-- [ ] - Custom theme color option
+##### Contributions
 
-MIT Licensed
+If you find a bug or want to a new feature, please file an issue. PR's are most welcome ;)
+
+##### License
+
+MIT © Gokulakrishnan
