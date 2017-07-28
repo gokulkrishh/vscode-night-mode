@@ -2,7 +2,7 @@
 	"name": "night-mode",
 	"displayName": "Night Mode",
 	"description": "Change vscode theme based on your timezone",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"publisher": "gokulkrishh",
 	"author": {
 		"name": "Gokulakrishnan Kalaikovan",
