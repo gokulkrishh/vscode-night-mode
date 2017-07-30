@@ -31,16 +31,14 @@ function activate(context) {
 		}, 60000);
 		
 		function changeTheme() {
-			if (config.get('colorTheme') !== options.colorTheme && currentHours >= 18) {
-				if (currentHours >= 18) {
-					const oldColorTheme = config.get('colorTheme');
-					if (oldColorTheme) options.oldColorTheme = oldColorTheme;
-					options.msg = `Activated ${options.colorTheme} theme`;
-					config.update('colorTheme', options.colorTheme, true);
-				}
+			const oldColorTheme = config.get('colorTheme');
+			if (currentHours >= 18 && !options.isNightActivated && oldColorTheme !== options.colorTheme) {
+				if (oldColorTheme) options.oldColorTheme = oldColorTheme;
+				options.msg = `Activated ${options.colorTheme} theme`;
+				config.update('colorTheme', options.colorTheme, true);
 			}
-			else if (options.oldColorTheme) {
-				if (currentHours >= 6 && currentHours < 18) {
+			else if (options.isNightActivated && currentHours >= 6 && currentHours < 18) {
+				if (options.oldColorTheme) {
 					config.update('colorTheme', options.oldColorTheme, true);
 				}
 				else {
@@ -48,6 +46,8 @@ function activate(context) {
 				}
 				options.msg = 'Changed back to your default theme';
 			}
+
+			options.isDeactivated = false;
 			
 			var msgDisposable = vscode.window.setStatusBarMessage(options.msg);
 			
@@ -81,10 +81,12 @@ function deactivate() {
 		else {
 			config.update('colorTheme', options.oldColorTheme, true);
 		}
-		
+
 		if (options.setIntervalId) {
 			clearInterval(options.setIntervalId);
 		}
+
+		options.isDeactivated = true;
 		
 		var msgDisposable = vscode.window.setStatusBarMessage('Night mode is deactivated');
 		
