@@ -32,16 +32,16 @@ vscodeNightMode.colorTheme = ""; // Default - Default High Contrast
 
 ### <p align="center"><img src="https://raw.githubusercontent.com/gokulkrishh/vscode-night-mode/master/images/vscode-deactivated.png"></p>
 
-### TODO
+##- TODO
 
 - [x] - Custom theme.
 
 - [ ] - Detech location to determine sunrise & sunset.
 
-##### Contributions
+#### Contributions
 
 If you find a bug or want to a new feature, please file an issue. PR's are most welcome ;)
 
-##### License
+#### License
 
 MIT © Gokulakrishnan
