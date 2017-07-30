@@ -31,7 +31,7 @@ function activate(context) {
 		}, 60000);
 		
 		function changeTheme() {
-			if (config.get('colorTheme') !== options.colorTheme) {
+			if (config.get('colorTheme') !== options.colorTheme && currentHours >= 18) {
 				if (currentHours >= 18) {
 					const oldColorTheme = config.get('colorTheme');
 					if (oldColorTheme) options.oldColorTheme = oldColorTheme;
@@ -39,7 +39,7 @@ function activate(context) {
 					config.update('colorTheme', options.colorTheme, true);
 				}
 			}
-			else {
+			else if (options.oldColorTheme) {
 				if (currentHours >= 6 && currentHours < 18) {
 					config.update('colorTheme', options.oldColorTheme, true);
 				}
@@ -69,15 +69,25 @@ function deactivate() {
 	const config = vscode.workspace.getConfiguration('workbench');
 	if (!options.isDeactivated) {
 		if (!options.oldColorTheme) {
-			config.update('colorTheme', undefined, true);
+			var oldColorTheme = config.get('colorTheme');
+			if (oldColorTheme) {
+				oldColorTheme = oldColorTheme;
+			}
+			else {
+				oldColorTheme = undefined;
+			}
+			config.update('colorTheme', oldColorTheme, true);
 		}
 		else {
 			config.update('colorTheme', options.oldColorTheme, true);
 		}
+		
 		if (options.setIntervalId) {
 			clearInterval(options.setIntervalId);
 		}
+		
 		var msgDisposable = vscode.window.setStatusBarMessage('Night mode is deactivated');
+		
 		setTimeout(function() {
 			msgDisposable.dispose();
 		}, 4000);
