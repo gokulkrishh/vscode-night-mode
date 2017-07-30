@@ -5,7 +5,7 @@ const nightModeConfig = vscode.workspace.getConfiguration('vscodeNightMode'); //
 const options = {
 	colorTheme: 'Default High Contrast',
 	isDeactivated: false,
-	msg: 'Night mode 👍',
+	msg: 'Night mode is activated 👍',
 	oldColorTheme: '',
 	setIntervalId: null
 };

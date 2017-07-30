@@ -20,7 +20,7 @@ In your `workspace.json` or `settings.json`, give your choice of theme name to c
 vscodeNightMode.colorTheme = ""; // Default - Default High Contrast
 ```
 
-## Activate or Switch back to your custom theme
+## Activate or Switch back to your previous theme
 
 - Shortcut - <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>.</kbd>
 
