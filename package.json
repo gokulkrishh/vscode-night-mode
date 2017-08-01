@@ -2,7 +2,7 @@
 	"name": "night-mode",
 	"displayName": "Night Mode",
 	"description": "A flux extension for vscode editor. Change custom theme at custom time.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "gokulkrishh",
 	"author": {
 		"name": "Gokulakrishnan Kalaikovan",
