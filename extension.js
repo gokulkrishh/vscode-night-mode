@@ -6,12 +6,24 @@ const options = {
 	colorTheme: nightModeConfig.colorTheme || 'Default High Contrast',
 	isDeactivated: false,
 	isActivated: false,
-	sunRise: nightModeConfig.sunRise || 6,
-	sunSet: nightModeConfig.sunSet || 18,
+	sunRise: 6,
+	sunSet: 18,
 	msg: 'Night mode is activated 👍',
 	oldColorTheme: '',
 	setIntervalId: null
 };
+
+if (nightModeConfig.colorTheme) {
+	options.colorTheme = nightModeConfig.colorTheme;
+}
+
+if (nightModeConfig.sunRise) {
+	options.sunRise = nightModeConfig.sunRise;
+}
+
+if (nightModeConfig.sunSet) {
+	options.sunSet = nightModeConfig.sunSet;
+}
 
 function activate(context) {
 	var activateEvent = vscode.commands.registerCommand('extension.activate', function () {
@@ -31,13 +43,13 @@ function activate(context) {
 		
 		function changeTheme() {
 			const oldColorTheme = config.get('colorTheme');
-			if (currentHours >= 18 && !options.isActivated && oldColorTheme !== options.colorTheme) {
+			if (currentHours >= options.sunSet && !options.isActivated && oldColorTheme !== options.colorTheme) {
 				if (oldColorTheme) options.oldColorTheme = oldColorTheme;
 				options.msg = `Activated ${options.colorTheme} theme`;
 				options.isActivated = true;
 				config.update('colorTheme', options.colorTheme, true);
 			}
-			else if (options.isActivated && currentHours >= 6 && currentHours < 18) {
+			else if (options.isActivated && currentHours >= options.sunRise && currentHours < options.sunSet) {
 				if (options.oldColorTheme) {
 					config.update('colorTheme', options.oldColorTheme, true);
 					options.msg = 'Changed back to your custom theme';
