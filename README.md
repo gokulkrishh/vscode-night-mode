@@ -23,7 +23,6 @@ In your `workspace.json` or `settings.json`, give your choice of theme name to c
 // Sunrise, Sunset in 24hrs format
 "nightMode.sunRise": "5" // Morning 5 AM - Default 6 AM 
 "nightMode.sunSet": "19" // Evening 7PM - Default 6 PM
-}
 ```
 
 ## Activate or Switch back to your previous theme
