@@ -1,18 +1,16 @@
 const vscode = require('vscode');
-const nightModeConfig = vscode.workspace.getConfiguration('vscodeNightMode'); // My extension config
+const nightModeConfig = vscode.workspace.getConfiguration('nightMode'); // My extension config
 
 // Default options
 const options = {
-	colorTheme: 'Default High Contrast',
+	colorTheme: nightModeConfig.colorTheme || 'Default High Contrast',
 	isDeactivated: false,
+	sunRise: nightModeConfig.sunRise || 6,
+	sunSet: nightModeConfig.sunSet || 18,
 	msg: 'Night mode is activated 👍',
 	oldColorTheme: '',
 	setIntervalId: null
 };
-
-if (nightModeConfig.colorTheme) {
-	options.colorTheme = nightModeConfig.colorTheme;
-}
 
 function activate(context) {
 	var activateEvent = vscode.commands.registerCommand('extension.activate', function () {
@@ -32,12 +30,12 @@ function activate(context) {
 		
 		function changeTheme() {
 			const oldColorTheme = config.get('colorTheme');
-			if (currentHours >= 18 && !options.isNightActivated && oldColorTheme !== options.colorTheme) {
+			if (currentHours >= 18 && oldColorTheme !== options.colorTheme) {
 				if (oldColorTheme) options.oldColorTheme = oldColorTheme;
 				options.msg = `Activated ${options.colorTheme} theme`;
 				config.update('colorTheme', options.colorTheme, true);
 			}
-			else if (options.isNightActivated && currentHours >= 6 && currentHours < 18) {
+			else if (currentHours >= 6 && currentHours < 18) {
 				if (options.oldColorTheme) {
 					config.update('colorTheme', options.oldColorTheme, true);
 				}

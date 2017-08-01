@@ -46,6 +46,14 @@
 				"nightMode.colorTheme": {
 					"type": "string",
 					"description": "Enter your custom theme name to change"
+				},
+				"nightMode.sunRise": {
+					"type": "string",
+					"description": "Enter your sunrise time in 24hrs format"
+				},
+				"nightMode.sunSet": {
+					"type": "string",
+					"description": "Enter your sunset time in 24hrs format"
 				}
 			}
 		}

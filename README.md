@@ -17,7 +17,11 @@ ext install vscode-night-mode
 In your `workspace.json` or `settings.json`, give your choice of theme name to change.
 
 ```json
-nightMode.colorTheme = ""; // Default - Default High Contrast
+{
+	"nightMode.colorTheme": "Monokai", // Default - Default High Contrast
+	"nightMode.sunRise": "5", // Morning 5 AM - Default 6 AM
+	"nightMode.sunSet": "19" // Evening 7PM - Default 6 PM
+}
 ```
 
 ## Activate or Switch back to your previous theme
@@ -31,12 +35,6 @@ nightMode.colorTheme = ""; // Default - Default High Contrast
 - Shortcut - <kbd>cmd</kbd> or <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>.</kbd>
 
 ### <p align="center"><img src="https://raw.githubusercontent.com/gokulkrishh/vscode-night-mode/master/images/vscode-deactivated.png"></p>
-
-##- TODO
-
-- [x] - Custom theme.
-
-- [ ] - Detech location to determine sunrise & sunset.
 
 #### Contributions
 
