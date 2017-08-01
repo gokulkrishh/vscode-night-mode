@@ -16,12 +16,13 @@ ext install vscode-night-mode
 
 In your `workspace.json` or `settings.json`, give your choice of theme name to change.
 
-```json
-{
-	"nightMode.colorTheme": "Monokai", // Default - Default High Contrast
-	"nightMode.sunRise": "5", // Morning 5 AM - Default 6 AM
-	"nightMode.sunSet": "19" // Evening 7PM - Default 6 PM
-}
+```js
+// Custom theme
+"nightMode.colorTheme": "Monokai" // Default - Default High Contrast
+
+// Sunrise, Sunset in 24hrs format
+"nightMode.sunRise": "5" // Morning 5 AM - Default 6 AM 
+"nightMode.sunSet": "19" // Evening 7PM - Default 6 PM
 ```
 
 ## Activate or Switch back to your previous theme
