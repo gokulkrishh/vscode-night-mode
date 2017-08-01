@@ -2,7 +2,7 @@
 
 # vscode-night-mode
 
-An extension to automatically change theme to `custom theme` at custom time (sunrise & sunset).
+A flux extension for vscode editor. Change `custom theme` at custom time (sunrise & sunset).
 
 ## Quick Start
 
