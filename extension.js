@@ -38,11 +38,12 @@ function activate(context) {
 			else if (currentHours >= 6 && currentHours < 18) {
 				if (options.oldColorTheme) {
 					config.update('colorTheme', options.oldColorTheme, true);
+					options.msg = 'Changed back to your custom theme';
 				}
 				else {
 					config.update('colorTheme', undefined, true);
+					options.msg = 'Changed back to default theme';
 				}
-				options.msg = 'Changed back to your default theme';
 			}
 
 			options.isDeactivated = false;
