@@ -2,7 +2,7 @@
 	"name": "night-mode",
 	"displayName": "Night Mode",
 	"description": "Change vscode to custom theme in morning & evening",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"publisher": "gokulkrishh",
 	"author": {
 		"name": "Gokulakrishnan Kalaikovan",
